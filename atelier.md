@@ -75,7 +75,7 @@ $$ E\left(\sum_{t=0}^\infty \gamma^t R(x_t,u_t)\right) \to \max. $$
 
 Définissons la $Q$-fonction (c'est presque la fonction valeur du problème de maximisation)
 
-$$ Q(x,u) := \max_{u_1,\ \dots} \left\{ E\left(\sum_{t=0}^\infty \gamma^t R(x_t,u_t)\right) \ |\ x_0 = x, u_0 = u \right\}. $$
+$$ Q(x,u) := \max_{u_1,\ \dots} \left\( E\left(\sum_{t=0}^\infty \gamma^t R(x_t,u_t)\right) \ |\ x_0 = x, u_0 = u \right\). $$
 
 Connaître cette fonction équivaut à savoir de jouer de façon optimale puisque, dans l'état $x$ du jeu, il suffit de choisir son coup $u$ parmi ceux qui maximisent la valeur $Q(x,u)$. La programmation dynamique nous apprend que cette $Q$-fonction vérifie l'équation de point-fixe ci-dessous : 
 
