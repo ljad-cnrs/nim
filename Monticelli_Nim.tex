@@ -17,18 +17,15 @@
 
 
 \title{}
-\author[1]{Jean-Baptiste Caillau}
-\author[1]{Christophe Cazanave}
-\author[1]{Marc Monticelli}
+\author[*]{Jean-Baptiste Caillau}
+\author[*]{Christophe Cazanave}
+\author[*]{Marc Monticelli}
 \affil{Université Côte d’Azur, CNRS, LJAD, France}
 \date{}
 
 \begin{document}
 
 \maketitle
-
-
-
 
 \section*{Jeu de Nim : l'IA en boîte (d'allumettes)}
 \label{jeu-de-nim-lia-en-bouxeete-dallumettes}
@@ -55,7 +52,6 @@
 
 On parle beaucoup des avancées spectaculaires récentes en intelligence artificielle (\href{https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue}{DeepBlue}, \href{https://www.deepmind.com/research/highlighted-research}{AlphaGo}, \href{https://openai.com/blog/chatgpt}{chatGPT})~: comment fonctionnent ces ``machines'' qui battent désormais systématiquement les grands maîtres d'échecs, de go, rédigent des programmes informatiques... ou des dissertations~? Le but de cet atelier est d'ouvrir ladite machine (la boîte d'allumettes~!) et d'illustrer sur l'exemple du jeu de Nim un algorithme élémentaire d'intelligence artificielle qui apprend \emph{seul} itérativement (par \emph{renforcement}) la stratégie gagnante de ce jeu.
 
-
 \subsection*{Manipulation no. 1 (20-30 minutes)}
 \label{manipulation-no.-1-20-30-minutes}
 
@@ -67,7 +63,7 @@ Donner les règles du Jeu de Nim (on peut par exemple illustrer avec un extrait 
 \end{enumerate}
 
 Laisser les élèves s'approprier les règles en jouant par binômes pendant plusieurs parties. Une fois que les règles sont bien comprises, les amener à remarquer qu'ils ne peuvent jamais vous battre si vous commencez. Ils comprennent ainsi que le premier joueur a une stratégie gagnante qu'ils doivent découvrir. Cette découverte pourra être favorisée par un changement du nombre initial d'allumettes (partir de 4, 5...).  \footnote{Pour les niveaux plus avancés, on peut utiliser le vocabulaire des congruences. Pour les autres, on remarque juste qu'il y a une répétition périodique des positions gagnantes et perdantes (et des coups à jouer).}
-
+%
 Débriefer et laisser au tableau un schéma illustrant le coup gagnant à jouer en fonction du nombre d'allumettes restantes. S'assurer que tous les élèves ont bien compris la stratégie et qu'ils savent ``récupérer la main'' si le premier joueur se trompe de coup.
 
 \begin{figure}[h!]
@@ -81,16 +77,23 @@ Débriefer et laisser au tableau un schéma illustrant le coup gagnant à jouer 
 \subsection{Intelligence artificielle (5-10 minutes)}
 \label{intelligence-artificielle-5-10-minutes}
 
-Le but de la suite est de construire une machine qui apprend à jouer. Insister sur le fait qu'il ne s'agit pas de programmer la solution qu'ils viennent de trouver dans un ordinateur: ce serait alors le programmeur qui serait intelligent et non la machine. On va leur proposer un algorithme d'apprentissage automatique : la machine apprend à jouer \emph{toute seule} ; on ne lui donne que les règles du jeu et une méthode d'apprentissage pour s'améliorer partie après partie. On peut illustrer avec l'histoire des échecs et comparer les programmes classiques (type Stockfish) et le programme révolutionnaire AlphaZero. Les élèves sont intéressés aussi par les machines qui jouent seules aux jeux vidéos.\footnote{On peut donner un rapide aperçu des différentes formes d'intelligence artificielle que l'on ne va pas illustrer (apprentissage supervisé et apprentissage non supervisé). Introduire le vocabulaire d' ''apprentissage par renforcement''.}
-
+Le but de la suite est de construire une machine qui apprend à jouer. Insister sur le fait qu'il ne s'agit pas de
+programmer la solution qu'ils viennent de trouver dans un ordinateur~: ce serait alors le programmeur qui serait
+intelligent et non la machine. On propose donc un algorithme d'apprentissage automatique : la machine apprend à jouer
+\emph{toute seule} ; on ne lui donne que les règles du jeu et une méthode d'apprentissage pour s'améliorer partie après
+partie. On peut illustrer avec l'histoire des échecs et comparer les programmes classiques (type \emph{Stockfish}) et le
+programme révolutionnaire \emph{AlphaZero}. Les élèves sont intéressés aussi par les machines qui jouent seules aux jeux
+vidéos.\footnote{On peut donner un rapide aperçu des différentes formes d'intelligence artificielle que l'on ne va pas
+illustrer (apprentissage supervisé et apprentissage non supervisé). Introduire le vocabulaire d'apprentissage \emph{par renforcement}.}
+%
 La méthode d'apprentissage repose sur deux principes très naturels~: l'exploration, en testant tous les coups possibles, et le renforcement, en privilégiant les coups qui font gagner et en oubliant ceux qui font perdre.
 
-
-\subsection{Manipulation ``à la Menace'' (20-30 minutes)}
+\subsection{Manipulation "à la Menace" (20-30 minutes)}
 \label{manipulation-uxe0-la-menace-20-30-minutes}
 
-On suit l'idée de la machine {\sc menace}(Matchbox Educable Noughts and Crosses Engine)  de Donald Michie \cite{Wiki, Michie} qui jouait au morpion, en l'adaptant au jeu de Nim.
-
+On suit l'idée de la machine {\sc menace} (Matchbox Educable Noughts and Crosses Engine) 
+de Donald Michie \cite{Wiki, Michie} qui jouait au morpion, en l'adaptant au jeu de Nim.
+%
 Par groupe de 4, les élèves ajoutent sous chaque allumette du jeu une boîte remplie avec 4 billes de chacune des 3 couleurs. Les boîtes servent à faire jouer la machine. Lorsque c'est au tour de la machine, les élèves tirent au hasard dans la boîte de la position courante une bille et la posent devant la boîte. Chaque couleur correspond à un coup possible (prendre les mêmes couleurs que dans la figure~\ref{fig:schemStrategie}).
 
 \begin{figure}[h!]
@@ -111,10 +114,9 @@ On échanger les rôles des binômes après  4 ou 5 parties.
 \label{fig:ProtocoleApprentissage}
 \end{figure}
 
-Lors de la première partie, s'assurer que les élèves ont bien compris la mise en place\footnote{Un petit détail souvent difficile à intégrer est que dans les deux premières boites, on ne met pas toutes les couleurs car certains coups ne sont plus possibles.} et comment faire jouer la machine\footnote{Au bout d'un moment, il peut arriver qu'une boîte ne contienne plus de billes du tout. Dans ce cas, on réinitialise la boîte avec 4 billes de chaque couleur.} et comment effectuer la phase de renforcement.
-
-
-  On constate empiriquement qu'il faut environ 100 parties pour obtenir une machine experte. Pour une fête de la science, on doit pouvoir atteindre ce nombre de parties. Pour une activité en classe, c'est trop fastidieux, on peut passer alors à une simulation numérique après avoir joué une dizaine de parties et constaté que la machine commence parfois à gagner.
+Lors de la première partie, s'assurer que les élèves ont bien compris la mise en place\footnote{Un petit détail souvent difficile à intégrer est que dans les deux premières bo\^\i tes, on ne met pas toutes les couleurs car certains coups ne sont plus possibles.} et comment faire jouer la machine\footnote{Au bout d'un moment, il peut arriver qu'une boîte ne contienne plus de billes du tout.Dans ce cas, on réinitialise la boîte avec 4 billes de chaque couleur.} et comment effectuer la phase de renforcement.
+%
+On constate empiriquement qu'il faut environ 100 parties pour obtenir une machine experte. Pour une fête de la science, on doit pouvoir atteindre ce nombre de parties. Pour une activité en classe, c'est trop fastidieux, on peut passer alors à une simulation numérique après avoir joué une dizaine de parties et constaté que la machine commence parfois à gagner.
 %Si elle a gagné, les élèves rajoutent 4 billes de la même couleur dans la boîte en (\emph{récompense})~; si elle a perdu, les élèves retirent les billes correspondant aux coups joués par la machine.
 
 % 
@@ -137,10 +139,11 @@ Lors de la première partie, s'assurer que les élèves ont bien compris la mise
 Une
 \href{https://u.pcloud.link/publink/show?code=XZsn7zVZrWj4xUeBzmhLp8Pxd7ismY5ezrMX}{applet
 java} est disponible sur le site de la MMI\cite{MMI} à Lyon. Constater que la machine obtient le motif périodique de la stratégie gagnante (voir Fig.1). Commenter le cas des boîtes correspondant aux positions perdantes (il y restera des billes de plusieurs couleurs). Montrer et commenter les différences de rapidité de convergence selon que le second joueur est naïf, expert ou que la machine joue contre elle-même.
-
+%
 On peut conclure en insistant sur toutes les questions mathématiques liées à ce genre d'algorithme (par exemple, autour de la vitesse de convergence) et sur l'utilité de former de former des étudiants compétents en mathématiques et en informatique.
 
-Pour ceux qui veulent aller plus loin, on peut renvoyer à l'article de E. Franck et Y. Privat \cite{FrankPrivat}, voire à l'ouvrage \cite{SuttonBarto}.
+Pour aller plus loin, on pourra consulter l'article récent \cite{FrankPrivat} de la gazette,
+voire se reporter à l'ouvrage de référence sur le sujet \cite{SuttonBarto}.
 % 
 % \subsection{Pour aller plus loin}
 % \label{pour-aller-plus-loin}
@@ -166,7 +169,6 @@ Pour ceux qui veulent aller plus loin, on peut renvoyer à l'article de E. Franc
 % \[ Q(x,u) = R(x,u) + \gamma E(\max_{u'} Q(f(x,u,e_0),u')). \]
 % 
 % Dans le cas d'un jeu possédant un nombre fini (en général très grand) de coups et d'états possibles, il ``suffit'' donc d'apprendre une approximation suffisamment bonne de la solution de cette équation de point fixe, c'est à dire du tableau des valeurs possibles \(Q(x_i,u_j)\) indexé par les états et les coups. C'est le principe du \(Q\)-learning, qui utilise un très grand de nombre d'épisodes du jeu pour renforcer et améliorer l'approximation de ce tableau, et est à la base de nombreux algorithmes d'apprentissage. On trouvera plus d'informations et de références sur le sujet dans le numéro d'octobre 2022 de la \emph{Gazette de la SMF}.
-
 
 \begin{thebibliography}{Références}
 \label{ruxe9fuxe9rences}
