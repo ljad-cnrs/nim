@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.17)  23 MAY 2023 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.17)  23 MAY 2023 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,13 +312,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./Images/fig2-v3.png, id=37, 609.27625pt x 339.2675pt>
+<./Images/fig2-v3.png, id=43, 609.27625pt x 339.2675pt>
 File: ./Images/fig2-v3.png Graphic file (type png)
 <use ./Images/fig2-v3.png>
 Package pdftex.def Info: ./Images/fig2-v3.png  used on input line 63.
 (pdftex.def)             Requested size: 243.70618pt x 135.70459pt.
  [2 <./Images/fig2-v3.png>]
-<./Images/fig3-v2.jpg, id=57, 527.571pt x 648.9846pt>
+<./Images/fig3-v2.jpg, id=62, 527.571pt x 648.9846pt>
 File: ./Images/fig3-v2.jpg Graphic file (type jpg)
 <use ./Images/fig3-v2.jpg>
 Package pdftex.def Info: ./Images/fig3-v2.jpg  used on input line 89.
@@ -327,7 +327,7 @@ Package pdftex.def Info: ./Images/fig3-v2.jpg  used on input line 89.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/fig1-v3.jpg, id=60, 489.9906pt x 325.215pt>
+<./Images/fig1-v3.jpg, id=65, 489.9906pt x 325.215pt>
 File: ./Images/fig1-v3.jpg Graphic file (type jpg)
 <use ./Images/fig1-v3.jpg>
 Package pdftex.def Info: ./Images/fig1-v3.jpg  used on input line 100.
@@ -340,64 +340,41 @@ Overfull \hbox (50.98746pt too wide) in paragraph at lines 100--101
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3] [4 <./Images/fig3-v2.jpg>]
-Underfull \hbox (badness 1748) in paragraph at lines 149--152
-[]\T1/cmr/m/n/12 Michie, D. Ex-pe-ri-ments on the Me-cha-ni-za-tion of Game-
- []
-
-[5 <./Images/fig1-v3.jpg>]
+[3] [4 <./Images/fig3-v2.jpg>] [5 <./Images/fig1-v3.jpg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
  [6]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
- (./Monticelli_Nim.aux)
+
+(./Monticelli_Nim.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
-
-
-Package rerunfilecheck Warning: File `Monticelli_Nim.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Monticelli_Nim.out':
-(rerunfilecheck)             Before: 7AE847ABB88650E7E3E720CE36AB4255;232
-(rerunfilecheck)             After:  99DCC9171052C6F5601A44DCF7100B84;345.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `Monticelli_Nim.out' has not changed.
+(rerunfilecheck)             Checksum: 99DCC9171052C6F5601A44DCF7100B84;345.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 6859 strings out of 481239
- 103480 string characters out of 5920376
- 376247 words of memory out of 5000000
- 21983 multiletter control sequences out of 15000+600000
+ 6857 strings out of 481239
+ 103405 string characters out of 5920376
+ 376181 words of memory out of 5000000
+ 21984 multiletter control sequences out of 15000+600000
  544049 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,6n,35p,780b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.0.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.0.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.0.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Monticelli_Nim.pdf (6 pages, 667887 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on Monticelli_Nim.pdf (6 pages, 667991 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 40 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
