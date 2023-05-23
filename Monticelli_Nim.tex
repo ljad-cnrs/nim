@@ -44,17 +44,17 @@
 \end{itemize}
 
 \section{Introduction (5 min)} \label{introduction-5-min}
-On parle beaucoup des avancées spectaculaires récentes en intelligence artificielle (\href{https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue}{DeepBlue}, \href{https://www.deepmind.com/research/highlighted-research}{AlphaGo}, \href{https://openai.com/blog/chatgpt}{chatGPT})~: comment fonctionnent ces ``machines'' qui battent désormais systématiquement les grands maîtres d'échecs, de go, rédigent des programmes informatiques... ou des dissertations~? Le but de cet atelier est d'ouvrir ladite machine (la boîte d'allumettes~!) et d'illustrer sur l'exemple du jeu de Nim un algorithme élémentaire d'intelligence artificielle qui apprend \emph{seul} itérativement (par \emph{renforcement}) la stratégie gagnante de ce jeu.
+\noindent On parle beaucoup des avancées spectaculaires récentes en intelligence artificielle (\href{https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue}{DeepBlue}, \href{https://www.deepmind.com/research/highlighted-research}{AlphaGo}, \href{https://openai.com/blog/chatgpt}{chatGPT})~: comment fonctionnent ces ``machines'' qui battent désormais systématiquement les grands maîtres d'échecs, de go, rédigent des programmes informatiques... ou des dissertations~? Le but de cet atelier est d'ouvrir ladite machine (la boîte d'allumettes~!) et d'illustrer sur l'exemple du jeu de Nim un algorithme élémentaire d'intelligence artificielle qui apprend \emph{seul} itérativement (par \emph{renforcement}) la stratégie gagnante de ce jeu.
 
 \section{Manipulation no. 1 (20-30 minutes)} \label{manipulation-no.-1-20-30-minutes}
-Donner les règles du Jeu de Nim (on peut par exemple illustrer avec un extrait vidéo de \href{https://fortboyard.tv}{Fort Boyard})~:
+\noindent Donner les règles du Jeu de Nim (on peut par exemple illustrer avec un extrait vidéo de \href{https://fortboyard.tv}{Fort Boyard})~:
 \begin{enumerate}
   \item On dispose côte à côte 8 allumettes \footnote{Le nombre \(8\) est différent de \(1\) modulo \(4\), ce qui assure que le premier joueur a une stratégie gagnante.}.
   \item Les joueurs retirent chacun leur tour de 1 à 3 allumettes.
   \item Le joueur qui prend la dernière allumette perd la partie.
 \end{enumerate}
 
-\noindent Laisser les élèves s'approprier les règles en jouant par binômes pendant plusieurs parties. Une fois que les règles sont bien comprises, les amener à remarquer qu'ils ne peuvent jamais vous battre si vous commencez. Ils comprennent ainsi que le premier joueur a une stratégie gagnante qu'ils doivent découvrir. Cette découverte pourra être favorisée par un changement du nombre initial d'allumettes (partir de 4, 5...).  \footnote{Pour les niveaux plus avancés, on peut utiliser le vocabulaire des congruences. Pour les autres, on remarque juste qu'il y a une répétition périodique des positions gagnantes et perdantes (et des coups à jouer).}
+Laisser les élèves s'approprier les règles en jouant par binômes pendant plusieurs parties. Une fois que les règles sont bien comprises, les amener à remarquer qu'ils ne peuvent jamais vous battre si vous commencez. Ils comprennent ainsi que le premier joueur a une stratégie gagnante qu'ils doivent découvrir. Cette découverte pourra être favorisée par un changement du nombre initial d'allumettes (partir de 4, 5...).  \footnote{Pour les niveaux plus avancés, on peut utiliser le vocabulaire des congruences. Pour les autres, on remarque juste qu'il y a une répétition périodique des positions gagnantes et perdantes (et des coups à jouer).}
 %
 Débriefer et laisser au tableau un schéma illustrant le coup gagnant à jouer en fonction du nombre d'allumettes restantes. S'assurer que tous les élèves ont bien compris la stratégie et qu'ils savent ``récupérer la main'' si le premier joueur se trompe de coup.
 
@@ -66,7 +66,7 @@ Débriefer et laisser au tableau un schéma illustrant le coup gagnant à jouer 
 \end{figure}
 
 \section{Intelligence artificielle (5-10 minutes)} \label{intelligence-artificielle-5-10-minutes}
-Le but de la suite est de construire une machine qui apprend à jouer. Insister sur le fait qu'il ne s'agit pas de
+\noindent Le but de la suite est de construire une machine qui apprend à jouer. Insister sur le fait qu'il ne s'agit pas de
 programmer la solution qu'ils viennent de trouver dans un ordinateur~: ce serait alors le programmeur qui serait
 intelligent et non la machine. On propose donc un algorithme d'apprentissage automatique : la machine apprend à jouer
 \emph{toute seule} ; on ne lui donne que les règles du jeu et une méthode d'apprentissage pour s'améliorer partie après
@@ -79,7 +79,7 @@ La méthode d'apprentissage repose sur deux principes très naturels~: l'explora
 
 \section{Manipulation "à la Menace" (20-30 minutes)}
 \label{manipulation-uxe0-la-menace-20-30-minutes}
-On suit l'idée de la machine {\sc menace} (Matchbox Educable Noughts and Crosses Engine) 
+\noindent On suit l'idée de la machine {\sc menace} (Matchbox Educable Noughts and Crosses Engine) 
 de Donald Michie \cite{Wiki, Michie} qui jouait au morpion, en l'adaptant au jeu de Nim.
 %
 Par groupe de 4, les élèves ajoutent sous chaque allumette du jeu une boîte remplie avec 4 billes de chacune des 3 couleurs. Les boîtes servent à faire jouer la machine. Lorsque c'est au tour de la machine, les élèves tirent au hasard dans la boîte de la position courante une bille et la posent devant la boîte. Chaque couleur correspond à un coup possible (prendre les mêmes couleurs que dans la figure~\ref{fig:schemStrategie}).
@@ -91,7 +91,7 @@ Par groupe de 4, les élèves ajoutent sous chaque allumette du jeu une boîte r
 \label{fig:PremApprentissage}
 \end{figure}
 
-\noindent Les élèves commencent l'apprentissage de la machine en suivant le protocole des figures~\ref{fig:PremApprentissage} et \ref{fig:ProtocoleApprentissage}. 
+Les élèves commencent l'apprentissage de la machine en suivant le protocole des figures~\ref{fig:PremApprentissage} et \ref{fig:ProtocoleApprentissage}. 
 Un binôme fait jouer la machine, l'autre binôme joue comme un expert. La machine joue en premier. À la fin de chaque partie, les élèves renforcent la machine. 
 On échanger les rôles des binômes après  4 ou 5 parties.
 
@@ -108,8 +108,7 @@ On constate empiriquement qu'il faut environ 100 parties pour obtenir une machin
 %Si elle a gagné, les élèves rajoutent 4 billes de la même couleur dans la boîte en (\emph{récompense})~; si elle a perdu, les élèves retirent les billes correspondant aux coups joués par la machine.
 
 \section{Simulation numérique} \label{simulation-numuxe9rique}
-Une
-\href{https://u.pcloud.link/publink/show?code=XZsn7zVZrWj4xUeBzmhLp8Pxd7ismY5ezrMX}{applet
+\noindent Une \href{https://u.pcloud.link/publink/show?code=XZsn7zVZrWj4xUeBzmhLp8Pxd7ismY5ezrMX}{applet
 java} est disponible sur le site de la MMI\cite{MMI} à Lyon. Constater que la machine obtient le motif périodique de la stratégie gagnante (voir Fig.1). Commenter le cas des boîtes correspondant aux positions perdantes (il y restera des billes de plusieurs couleurs). Montrer et commenter les différences de rapidité de convergence selon que le second joueur est naïf, expert ou que la machine joue contre elle-même.
 %
 On peut conclure en insistant sur toutes les questions mathématiques liées à ce genre d'algorithme (par exemple, autour de la vitesse de convergence) et sur l'utilité de former de former des étudiants compétents en mathématiques et en informatique.
@@ -142,8 +141,7 @@ voire se reporter à l'ouvrage de référence sur le sujet \cite{SuttonBarto}.
 % 
 % Dans le cas d'un jeu possédant un nombre fini (en général très grand) de coups et d'états possibles, il ``suffit'' donc d'apprendre une approximation suffisamment bonne de la solution de cette équation de point fixe, c'est à dire du tableau des valeurs possibles \(Q(x_i,u_j)\) indexé par les états et les coups. C'est le principe du \(Q\)-learning, qui utilise un très grand de nombre d'épisodes du jeu pour renforcer et améliorer l'approximation de ce tableau, et est à la base de nombreux algorithmes d'apprentissage. On trouvera plus d'informations et de références sur le sujet dans le numéro d'octobre 2022 de la \emph{Gazette de la SMF}.
 
-\begin{thebibliography}{100}%Références}
-\label{ruxe9fuxe9rences}
+\begin{thebibliography}{100} \label{ruxe9fuxe9rences}
 
 \bibitem{Michie}
 Michie, D. Experiments on the Mechanization of Game-Learning Part I.

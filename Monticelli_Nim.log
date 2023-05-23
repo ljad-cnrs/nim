@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.17)  23 MAY 2023 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.17)  23 MAY 2023 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,16 +341,16 @@ Overfull \hbox (50.98746pt too wide) in paragraph at lines 100--101
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3] [4 <./Images/fig3-v2.jpg>] [5 <./Images/fig1-v3.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
  [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
 
 (./Monticelli_Nim.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
 Package rerunfilecheck Info: File `Monticelli_Nim.out' has not changed.
 (rerunfilecheck)             Checksum: 99DCC9171052C6F5601A44DCF7100B84;345.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
  6857 strings out of 481239
@@ -359,7 +359,7 @@ Here is how much of TeX's memory you used:
  21984 multiletter control sequences out of 15000+600000
  544049 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,35p,780b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,6n,35p,790b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/f
@@ -371,7 +371,7 @@ onts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Monticelli_Nim.pdf (6 pages, 667991 bytes).
+Output written on Monticelli_Nim.pdf (6 pages, 668043 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  130 compressed objects within 2 object streams
