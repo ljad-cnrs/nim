@@ -16,19 +16,17 @@
 \usepackage{hyperref}
 
 
-\title{}
-\author[*]{Jean-Baptiste Caillau}
-\author[*]{Christophe Cazanave}
-\author[*]{Marc Monticelli}
+\title{\bf Jeu de Nim : l'IA en boîte (d'allumettes)}
+\author{Jean-Baptiste Caillau}
+\author{Christophe Cazanave}
+\author{Marc Monticelli}
 \affil{Université Côte d’Azur, CNRS, LJAD, France}
 \date{}
 
 \begin{document}
 
 \maketitle
-
-\section*{Jeu de Nim : l'IA en boîte (d'allumettes)}
-\label{jeu-de-nim-lia-en-bouxeete-dallumettes}
+\label{jeu-de-nim-lia-en-boite-dallumettes}
 
 \begin{itemize}
 \item
@@ -45,16 +43,10 @@
   \textbf{Matériel} (par binôme) : 8 allumettes, $50 \times 3 = 150$ billes (ou perles à repasser\ldots) de 3 couleurs différentes, 8 boîtes d'allumettes
 \end{itemize}
 
-
-\subsection*{Introduction (5 min)}
-\label{introduction-5-min}
-
-
+\section{Introduction (5 min)} \label{introduction-5-min}
 On parle beaucoup des avancées spectaculaires récentes en intelligence artificielle (\href{https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue}{DeepBlue}, \href{https://www.deepmind.com/research/highlighted-research}{AlphaGo}, \href{https://openai.com/blog/chatgpt}{chatGPT})~: comment fonctionnent ces ``machines'' qui battent désormais systématiquement les grands maîtres d'échecs, de go, rédigent des programmes informatiques... ou des dissertations~? Le but de cet atelier est d'ouvrir ladite machine (la boîte d'allumettes~!) et d'illustrer sur l'exemple du jeu de Nim un algorithme élémentaire d'intelligence artificielle qui apprend \emph{seul} itérativement (par \emph{renforcement}) la stratégie gagnante de ce jeu.
 
-\subsection*{Manipulation no. 1 (20-30 minutes)}
-\label{manipulation-no.-1-20-30-minutes}
-
+\section{Manipulation no. 1 (20-30 minutes)} \label{manipulation-no.-1-20-30-minutes}
 Donner les règles du Jeu de Nim (on peut par exemple illustrer avec un extrait vidéo de \href{https://fortboyard.tv}{Fort Boyard})~:
 \begin{enumerate}
   \item On dispose côte à côte 8 allumettes \footnote{Le nombre \(8\) est différent de \(1\) modulo \(4\), ce qui assure que le premier joueur a une stratégie gagnante.}.
@@ -62,7 +54,7 @@ Donner les règles du Jeu de Nim (on peut par exemple illustrer avec un extrait 
   \item Le joueur qui prend la dernière allumette perd la partie.
 \end{enumerate}
 
-Laisser les élèves s'approprier les règles en jouant par binômes pendant plusieurs parties. Une fois que les règles sont bien comprises, les amener à remarquer qu'ils ne peuvent jamais vous battre si vous commencez. Ils comprennent ainsi que le premier joueur a une stratégie gagnante qu'ils doivent découvrir. Cette découverte pourra être favorisée par un changement du nombre initial d'allumettes (partir de 4, 5...).  \footnote{Pour les niveaux plus avancés, on peut utiliser le vocabulaire des congruences. Pour les autres, on remarque juste qu'il y a une répétition périodique des positions gagnantes et perdantes (et des coups à jouer).}
+\noindent Laisser les élèves s'approprier les règles en jouant par binômes pendant plusieurs parties. Une fois que les règles sont bien comprises, les amener à remarquer qu'ils ne peuvent jamais vous battre si vous commencez. Ils comprennent ainsi que le premier joueur a une stratégie gagnante qu'ils doivent découvrir. Cette découverte pourra être favorisée par un changement du nombre initial d'allumettes (partir de 4, 5...).  \footnote{Pour les niveaux plus avancés, on peut utiliser le vocabulaire des congruences. Pour les autres, on remarque juste qu'il y a une répétition périodique des positions gagnantes et perdantes (et des coups à jouer).}
 %
 Débriefer et laisser au tableau un schéma illustrant le coup gagnant à jouer en fonction du nombre d'allumettes restantes. S'assurer que tous les élèves ont bien compris la stratégie et qu'ils savent ``récupérer la main'' si le premier joueur se trompe de coup.
 
@@ -73,10 +65,7 @@ Débriefer et laisser au tableau un schéma illustrant le coup gagnant à jouer 
 \label{fig:schemStrategie}
 \end{figure}
 
-
-\subsection{Intelligence artificielle (5-10 minutes)}
-\label{intelligence-artificielle-5-10-minutes}
-
+\section{Intelligence artificielle (5-10 minutes)} \label{intelligence-artificielle-5-10-minutes}
 Le but de la suite est de construire une machine qui apprend à jouer. Insister sur le fait qu'il ne s'agit pas de
 programmer la solution qu'ils viennent de trouver dans un ordinateur~: ce serait alors le programmeur qui serait
 intelligent et non la machine. On propose donc un algorithme d'apprentissage automatique : la machine apprend à jouer
@@ -88,9 +77,8 @@ illustrer (apprentissage supervisé et apprentissage non supervisé). Introduire
 %
 La méthode d'apprentissage repose sur deux principes très naturels~: l'exploration, en testant tous les coups possibles, et le renforcement, en privilégiant les coups qui font gagner et en oubliant ceux qui font perdre.
 
-\subsection{Manipulation "à la Menace" (20-30 minutes)}
+\section{Manipulation "à la Menace" (20-30 minutes)}
 \label{manipulation-uxe0-la-menace-20-30-minutes}
-
 On suit l'idée de la machine {\sc menace} (Matchbox Educable Noughts and Crosses Engine) 
 de Donald Michie \cite{Wiki, Michie} qui jouait au morpion, en l'adaptant au jeu de Nim.
 %
@@ -103,7 +91,7 @@ Par groupe de 4, les élèves ajoutent sous chaque allumette du jeu une boîte r
 \label{fig:PremApprentissage}
 \end{figure}
 
-Les élèves commencent l'apprentissage de la machine en suivant le protocole des figures~\ref{fig:PremApprentissage} et \ref{fig:ProtocoleApprentissage}. 
+\noindent Les élèves commencent l'apprentissage de la machine en suivant le protocole des figures~\ref{fig:PremApprentissage} et \ref{fig:ProtocoleApprentissage}. 
 Un binôme fait jouer la machine, l'autre binôme joue comme un expert. La machine joue en premier. À la fin de chaque partie, les élèves renforcent la machine. 
 On échanger les rôles des binômes après  4 ou 5 parties.
 
@@ -119,23 +107,7 @@ Lors de la première partie, s'assurer que les élèves ont bien compris la mise
 On constate empiriquement qu'il faut environ 100 parties pour obtenir une machine experte. Pour une fête de la science, on doit pouvoir atteindre ce nombre de parties. Pour une activité en classe, c'est trop fastidieux, on peut passer alors à une simulation numérique après avoir joué une dizaine de parties et constaté que la machine commence parfois à gagner.
 %Si elle a gagné, les élèves rajoutent 4 billes de la même couleur dans la boîte en (\emph{récompense})~; si elle a perdu, les élèves retirent les billes correspondant aux coups joués par la machine.
 
-% 
-% \subsection{Quelques détails}
-% \label{quelques-duxe9tails}
-% 
-% 
-% \begin{itemize}
-% \item
-%   
-% \item
-%   
-% \item
-%   
-% \end{itemize}
-
-\subsection{Simulation numérique}
-\label{simulation-numuxe9rique}
-
+\section{Simulation numérique} \label{simulation-numuxe9rique}
 Une
 \href{https://u.pcloud.link/publink/show?code=XZsn7zVZrWj4xUeBzmhLp8Pxd7ismY5ezrMX}{applet
 java} est disponible sur le site de la MMI\cite{MMI} à Lyon. Constater que la machine obtient le motif périodique de la stratégie gagnante (voir Fig.1). Commenter le cas des boîtes correspondant aux positions perdantes (il y restera des billes de plusieurs couleurs). Montrer et commenter les différences de rapidité de convergence selon que le second joueur est naïf, expert ou que la machine joue contre elle-même.
@@ -174,21 +146,21 @@ voire se reporter à l'ouvrage de référence sur le sujet \cite{SuttonBarto}.
 \label{ruxe9fuxe9rences}
 
 \bibitem{Michie}
-\newblock Michie, D. Experiments on the Mechanization of Game-Learning Part I.
+Michie, D. Experiments on the Mechanization of Game-Learning Part I.
   Characterization of the Model and its parameters. 
   \emph{Comput. J.} \textbf{6} (1963), 232-236.
 
 \bibitem{Wiki}
-\newblock \href{https://en.wikipedia.org/wiki/Matchbox_Educable_Noughts_and_Crosses_Engine}{Article Wikipédia \emph{Matchbox Educable Noughts and Crosses Engine}}
+\href{https://en.wikipedia.org/wiki/Matchbox_Educable_Noughts_and_Crosses_Engine}{Wikipedia on \emph{Matchbox Educable Noughts and Crosses Engine}}
   
 \bibitem{FrankPrivat}
-\newblock Franck, E.; Privat, Y. Contrôler, optimiser, décider. \emph{Gazette de la SMF} \textbf{174} (2022), 9-21.
+Franck, E.; Privat, Y. Contrôler, optimiser, décider. \emph{Gazette de la SMF} \textbf{174} (2022), 9-21.
   
 \bibitem{MMI}
-\newblock \href{https://mmi-lyon.fr/jouer-au-jeu-de-nim-contre-une-machine}{Jouer au de NIM contre une machine, Maison des Mathématiques et de l'informatique de Lyon}
+\href{https://mmi-lyon.fr/jouer-au-jeu-de-nim-contre-une-machine}{Jouer au de NIM contre une machine, Maison des Mathématiques et de l'informatique de Lyon}.
   
 \bibitem{SuttonBarto}
-\newblock \href{https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf}{Sutton,  R. S. ; Barto, A. G. Reinforcement learning : an introduction, MIT press, 2015}
+\href{https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf}{Sutton,  R. S. ; Barto, A. G. Reinforcement learning : an introduction, MIT press, 2015.}
 \end{thebibliography}
 
 \end{document}
