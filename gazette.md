@@ -65,11 +65,23 @@ L'apprentissage par renforcement se modélise bien dans le contexte du contrôle
 
 $$ E\left(\sum_{t=0}^{N-1} R(x_t,u_t)\right) \to \max $$
 
-où le temps $t=0,\dots,N-1$ est discret ($N$ est l'horizon, fini, du jeu), et où $R$ est la fonction qui modélise la récompense (elle peut être négative, auquel cas c'est une punition) obtenue en fonction de l'état courant du jeu, $x_t$, et du coup joué, $u_t$ (c'est le contrôle ou *action* exercée sur le système). L'évolution de l'état du jeu est modélisé par une dynamique discrète (en général stochastique),
+où le temps $t=0,\dots,N-1$ est discret ($N$ est l'horizon, fini, du jeu), et où $R$ est la fonction qui modélise la
+récompense (elle peut être négative, auquel cas c'est une punition) obtenue en fonction de l'état courant du jeu, $x_t$,
+et du coup joué, $u_t$ (c'est le contrôle ou *action* exercée sur le système). Ici, l'état est
+simplement le nombre d'allumettes présentes quand c'est au tour de la machine de jouer.
+En particulier, l'état initial est représenté par la valeur $8$.
+Le contrôle consiste quant à lui à déterminer le nombre d'allumettes (entre $1$ et $3$,
+de façon à être \emph{admissible}) à faire retirer par la machine.
+L'évolution de l'état du jeu est modélisé par une dynamique discrète (en général stochastique),
 
 $$ x_{t+1} = f(x_t,u_t,e_t),\quad t \geq 0, $$
 
-où $x_0$ est fixé et où $e_t$ est un processus à temps discret. Pour simplifier (!), faisons tendre $N$ vers l'infini (partie très longue) en considérant un coût un peu renormalisé à l'aide d'un *discount factor* $\gamma \in ]0,1[$ selon
+où $x_0$ est fixé et où $e_t$ est un processus à temps discret. Il s'agit simplement dans notre
+cas de soustraire le nombre d'allumettes que la machine retire et, par exemple, de modéliser le
+comportement de l'adversaire de la machine par un processus stochastique. (La qualité de jeu de
+cet adversaire pourra néanmoins avoir une influence sur la vitesse de convergence vers la
+stratégie optimale pour la machine). 
+Pour simplifier (!), faisons tendre $N$ vers l'infini (partie très longue) en considérant un coût un peu renormalisé à l'aide d'un *discount factor* $\gamma \in ]0,1[$ selon
 
 $$ E\left(\sum_{t=0}^\infty \gamma^t R(x_t,u_t)\right) \to \max. $$
 
