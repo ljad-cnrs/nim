@@ -312,13 +312,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./Images/fig2-v3.png, id=43, 609.27625pt x 339.2675pt>
+<./Images/fig2-v3.png, id=42, 609.27625pt x 339.2675pt>
 File: ./Images/fig2-v3.png Graphic file (type png)
 <use ./Images/fig2-v3.png>
 Package pdftex.def Info: ./Images/fig2-v3.png  used on input line 63.
 (pdftex.def)             Requested size: 243.70618pt x 135.70459pt.
  [2 <./Images/fig2-v3.png>]
-<./Images/fig3-v2.jpg, id=64, 527.571pt x 648.9846pt>
+<./Images/fig3-v2.jpg, id=63, 527.571pt x 648.9846pt>
 File: ./Images/fig3-v2.jpg Graphic file (type jpg)
 <use ./Images/fig3-v2.jpg>
 Package pdftex.def Info: ./Images/fig3-v2.jpg  used on input line 94.
@@ -327,7 +327,7 @@ Package pdftex.def Info: ./Images/fig3-v2.jpg  used on input line 94.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/fig1-v3.jpg, id=65, 489.9906pt x 325.215pt>
+<./Images/fig1-v3.jpg, id=64, 489.9906pt x 325.215pt>
 File: ./Images/fig1-v3.jpg Graphic file (type jpg)
 <use ./Images/fig1-v3.jpg>
 Package pdftex.def Info: ./Images/fig1-v3.jpg  used on input line 101.
@@ -355,7 +355,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
 Here is how much of TeX's memory you used:
  6857 strings out of 481239
  103405 string characters out of 5920376
- 376181 words of memory out of 5000000
+ 376195 words of memory out of 5000000
  21984 multiletter control sequences out of 15000+600000
  544049 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -369,12 +369,12 @@ m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb
 onts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Monticelli_Nim.pdf (6 pages, 668026 bytes).
+nts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfti1200.pfb>
+Output written on Monticelli_Nim.pdf (6 pages, 653939 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 152 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  29 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
