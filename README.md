@@ -1,5 +1,5 @@
 # nim
 
-[Papier gazette](https://github.com/ljad-cnrs/nim/blob/main/gazette.md) 
+[Papier Gazette](https://github.com/ljad-cnrs/nim/blob/main/Monticelli_Nim.pdf)
 
-[Draft hackmd](https://hackmd.io/MxgsK7ZnTT62GgjM4GOMEA)
+[Version en ligne](https://github.com/ljad-cnrs/nim/blob/main/gazette.md) 
